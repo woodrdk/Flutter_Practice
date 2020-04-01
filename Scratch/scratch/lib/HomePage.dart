@@ -33,17 +33,49 @@ class _HomePageState extends State<HomePage> {
     });
   }
 
-  //TODO: define a getImage method
+  // define a getImage method
+  AssetImage getImage(int index){
+    String currentState = itemArray[index];
+    switch (currentState) {
+      case "lucky":
+        return lucky;
+        break;
+      case "unlucky":
+        return unlucky;
+        break;
+    }
+    return circle;
+  }
 
-  //TODO: play game method
+  // play game method
+  playGame(int index){
+    if(luckyNumber == index){
+      setState(() {
+        itemArray[index] = "lucky";
+      });
+    }
+    else{
+      setState(() {
+          itemArray[index] = "unlucky";
+      });
+    }
+  }
 
-  //TODO: show all  
+  // show all  
+  showAll(){
+    setState(() {
+      itemArray = List<String>.filled(25, "unlucky");
+      itemArray[luckyNumber] = "lucky";
+    });
+  }
+
 
   // reset game
   resetGame(){
     setState(() {
       itemArray = List<String>.filled(25, "empty");
     });
+    generateRandomNumber();
   }
 
 
