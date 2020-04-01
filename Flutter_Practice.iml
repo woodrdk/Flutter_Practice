@@ -19,6 +19,8 @@
       <excludeFolder url="file://$MODULE_DIR$/TicTacToe/build" />
       <excludeFolder url="file://$MODULE_DIR$/cameraGesture/mycamerapp/.pub" />
       <excludeFolder url="file://$MODULE_DIR$/cameraGesture/mycamerapp/build" />
+      <excludeFolder url="file://$MODULE_DIR$/mydrawerapp/mydrawerapp/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/mydrawerapp/mydrawerapp/build" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
