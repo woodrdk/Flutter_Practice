@@ -37,10 +37,10 @@ class _HomePageState extends State<HomePage> {
     if(this.gameState[index] == "empty"){
       setState(() {
        if(this.isCross){
-         this.gameState[index] = "cross";
+         this.gameState[index] = "Cross";
        } 
        else{
-         this.gameState[index] = "circle";
+         this.gameState[index] = "Circle";
        }
        this.isCross = !this.isCross;
       this.checkWin();
@@ -51,10 +51,12 @@ class _HomePageState extends State<HomePage> {
 
   // reset game method
   resetGame(){
-    this.gameState = [
+    setState(() {
+      this.gameState = [
         "empty","empty","empty","empty","empty","empty","empty","empty","empty",
-    ];
-    this.message = "";
+      ];
+      this.message = "";
+    });
   }
 
   // get image method
@@ -63,10 +65,10 @@ class _HomePageState extends State<HomePage> {
       case ('empty'):
         return edit;
         break;
-      case ('cross'):
+      case ('Cross'):
         return cross;
         break;
-      case ('circle'):
+      case ('Circle'):
         return circle;
         break;
     }
@@ -173,7 +175,35 @@ class _HomePageState extends State<HomePage> {
                 ),
               ),
           ),
-          
+          Container(
+            padding: EdgeInsets.all(20.0),
+            child: Text(this.message,
+            style: TextStyle(
+              fontSize: 20.0, 
+              fontWeight: FontWeight.bold,
+              ),
+            ),
+          ),
+          MaterialButton(
+            color: Colors.purple,
+            minWidth: 300.0,
+            height: 50.0,
+            child: Text("Reset Game",
+              style: TextStyle(
+                color: Colors.white,
+                fontSize: 20.0,
+              ),
+            ),
+            onPressed: () {
+              this.resetGame();
+            },
+          ),
+          Container(
+            padding: EdgeInsets.all(20.0), 
+            child: Text("Made by Rob",
+            style: TextStyle(fontSize: 18.0),
+            ),
+          )
         ],
       ),
     );
