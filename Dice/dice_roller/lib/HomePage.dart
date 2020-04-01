@@ -18,6 +18,10 @@ class _HomePageState extends State<HomePage> {
 
   AssetImage diceimage;
   AssetImage diceimage2;
+  AssetImage diceimage3;
+  AssetImage diceimage4;
+  AssetImage diceimage5;
+  
 
   @override 
   void initState() { 
@@ -25,59 +29,51 @@ class _HomePageState extends State<HomePage> {
     setState(() {
       diceimage = one;
       diceimage2 = two;
+      diceimage3 = three;
+      diceimage4 = four;
+      diceimage5 = five;
     });
   }
 
   void rollDice(){
-    int random = (1 + Random().nextInt(6)); // give random value between 1 & 6
-    int random2 = (1 + Random().nextInt(6)); // give random value between 1 & 6
+  
     AssetImage newImage;
     AssetImage newImage2;
-    switch (random) {
+    AssetImage newImage3;
+    AssetImage newImage4;
+    AssetImage newImage5;
+    var diceImages = [newImage, newImage2, newImage3, newImage4, newImage5 ];
+    for(int i = 0; i < 5; i++){
+       int random = (1 + Random().nextInt(6)); 
+      switch (random) {
       case 1:
-        newImage = one;
+        diceImages[i] = one;
         break;
       case 2:
-        newImage = two;
+        diceImages[i] = two;
         break;
       case 3:
-        newImage = three;
+        diceImages[i] = three;
         break;
       case 4:
-        newImage = four;
+        diceImages[i] = four;
         break;
       case 5:
-        newImage = five;
+        diceImages[i] = five;
         break;
       case 6:
-        newImage = six;
+        diceImages[i] = six;
         break;
-    }
-    switch (random2) {
-      case 1:
-        newImage2 = one;
-        break;
-      case 2:
-        newImage2 = two;
-        break;
-      case 3:
-        newImage2 = three;
-        break;
-      case 4:
-        newImage2 = four;
-        break;
-      case 5:
-        newImage2 = five;
-        break;
-      case 6:
-        newImage2 = six;
-        break;
+      }
     }
     setState(() {
-      diceimage = newImage;
-      diceimage2 = newImage2;
+      diceimage = diceImages[0];
+      diceimage2 = diceImages[1];
+      diceimage3 = diceImages[2];
+      diceimage4 = diceImages[3];
+      diceimage5 = diceImages[4];
     });
-
+ 
   }
   
   @override
@@ -94,13 +90,28 @@ class _HomePageState extends State<HomePage> {
               Row(children: <Widget>[
                 Image(
                   image: diceimage,
-                  width: 100.0,
-                  height: 100.0,
+                  width: 75.0,
+                  height: 75.0,
                 ),
                 Image(
                   image: diceimage2,
-                  width: 100.0,
-                  height: 100.0,
+                  width: 75.0,
+                  height: 75.0,
+                ),
+                Image(
+                  image: diceimage3,
+                  width: 75.0,
+                  height: 75.0,
+                ),
+                Image(
+                  image: diceimage4,
+                  width: 75.0,
+                  height: 75.0,
+                ),
+                Image(
+                  image: diceimage5,
+                  width: 75.0,
+                  height: 75.0,
                 ),
               ]
               ),

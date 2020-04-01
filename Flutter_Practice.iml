@@ -5,6 +5,8 @@
     <content url="file://$MODULE_DIR$">
       <excludeFolder url="file://$MODULE_DIR$/BGchanger/bg_changer/.pub" />
       <excludeFolder url="file://$MODULE_DIR$/BGchanger/bg_changer/build" />
+      <excludeFolder url="file://$MODULE_DIR$/Dice/dice_roller/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/Dice/dice_roller/build" />
       <excludeFolder url="file://$MODULE_DIR$/F01/hello_world/.pub" />
       <excludeFolder url="file://$MODULE_DIR$/F01/hello_world/build" />
       <excludeFolder url="file://$MODULE_DIR$/F02/my_stateless/.pub" />
