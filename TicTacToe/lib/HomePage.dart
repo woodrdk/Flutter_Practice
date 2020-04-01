@@ -35,11 +35,28 @@ class _HomePageState extends State<HomePage> {
   //TODO: play game method
 
 
-  //TODO: reset game method
+  // reset game method
+  resetGame(){
+    this.gameState = [
+        "empty","empty","empty","empty","empty","empty","empty","empty","empty",
+    ];
+    this.message = "";
+  }
 
-
-  //TODO: get image method
-
+  // get image method
+  AssetImage getImage(String value){
+    switch (value) {
+      case ('empty'):
+        return edit;
+        break;
+      case ('cross'):
+        return cross;
+        break;
+      case ('circle'):
+        return circle;
+        break;
+    }
+  }
 
   //TODO: check for win logic
   
