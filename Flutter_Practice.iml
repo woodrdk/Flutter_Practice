@@ -13,6 +13,8 @@
       <excludeFolder url="file://$MODULE_DIR$/F02/my_stateless/build" />
       <excludeFolder url="file://$MODULE_DIR$/F03/my_stateful/.pub" />
       <excludeFolder url="file://$MODULE_DIR$/F03/my_stateful/build" />
+      <excludeFolder url="file://$MODULE_DIR$/TicTacToe/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/TicTacToe/build" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
