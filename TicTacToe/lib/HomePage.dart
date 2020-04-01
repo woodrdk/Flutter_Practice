@@ -32,7 +32,21 @@ class _HomePageState extends State<HomePage> {
     });
   }
 
-  //TODO: play game method
+  // play game method
+  playGame(int index){
+    if(this.gameState[index] == "empty"){
+      setState(() {
+       if(this.isCross){
+         this.gameState[index] = "cross";
+       } 
+       else{
+         this.gameState[index] = "circle";
+       }
+       this.isCross = !this.isCross;
+      this.checkWin();
+      });
+    }
+  }
 
 
   // reset game method
@@ -58,8 +72,72 @@ class _HomePageState extends State<HomePage> {
     }
   }
 
-  //TODO: check for win logic
-  
+  // check for win logic
+  checkWin(){
+    if((gameState[0] != 'empty') && 
+       (gameState[0] == gameState[1]) &&
+       (gameState[1] == gameState[2])
+       ){
+         setState(() {
+           this.message = '${this.gameState[0]} Wins';
+         });
+       }
+    else if((gameState[3] != 'empty') && 
+            (gameState[3] == gameState[4]) &&
+            (gameState[4] == gameState[5])){
+       setState(() {
+         this.message = '${this.gameState[3]} Wins';
+       });
+    }
+    else if((gameState[6] != 'empty') && 
+            (gameState[6] == gameState[7]) &&
+            (gameState[7] == gameState[8])){
+       setState(() {
+         this.message = '${this.gameState[6]} Wins';
+       });
+    }
+    else if((gameState[0] != 'empty') && 
+            (gameState[0] == gameState[3]) &&
+            (gameState[3] == gameState[6])){
+       setState(() {
+         this.message = '${this.gameState[0]} Wins';
+       });
+    }
+    else if((gameState[1] != 'empty') && 
+            (gameState[1] == gameState[4]) &&
+            (gameState[4] == gameState[7])){
+       setState(() {
+         this.message = '${this.gameState[1]} Wins';
+       });
+    }
+    else if((gameState[2] != 'empty') && 
+            (gameState[2] == gameState[5]) &&
+            (gameState[5] == gameState[8])){
+       setState(() {
+         this.message = '${this.gameState[2]} Wins';
+       });
+    }
+
+    else if((gameState[0] != 'empty') && 
+            (gameState[0] == gameState[4]) &&
+            (gameState[4] == gameState[8])){
+       setState(() {
+         this.message = '${this.gameState[0]} Wins';
+       });
+    }
+    else if((gameState[2] != 'empty') && 
+            (gameState[2] == gameState[4]) &&
+            (gameState[4] == gameState[6])){
+       setState(() {
+         this.message = '${this.gameState[2]} Wins';
+       });
+    }
+    else if(!gameState.contains('empty')){
+      setState(() {
+        this.message = 'Game Draw';
+      });
+    }
+  }
   
   @override
   Widget build(BuildContext context) {
