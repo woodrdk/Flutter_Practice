@@ -29,6 +29,8 @@
       <excludeFolder url="file://$MODULE_DIR$/signup/build" />
       <excludeFolder url="file://$MODULE_DIR$/spanish/spanish/.pub" />
       <excludeFolder url="file://$MODULE_DIR$/spanish/spanish/build" />
+      <excludeFolder url="file://$MODULE_DIR$/todoApp/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/todoApp/build" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
