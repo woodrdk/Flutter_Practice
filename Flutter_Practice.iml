@@ -5,6 +5,8 @@
     <content url="file://$MODULE_DIR$">
       <excludeFolder url="file://$MODULE_DIR$/APIs/MyGitHubAPI/mygithubapi/.pub" />
       <excludeFolder url="file://$MODULE_DIR$/APIs/MyGitHubAPI/mygithubapi/build" />
+      <excludeFolder url="file://$MODULE_DIR$/APIs/randomUserApi/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/APIs/randomUserApi/build" />
       <excludeFolder url="file://$MODULE_DIR$/BGchanger/bg_changer/.pub" />
       <excludeFolder url="file://$MODULE_DIR$/BGchanger/bg_changer/build" />
       <excludeFolder url="file://$MODULE_DIR$/Dice/dice_roller/.pub" />
