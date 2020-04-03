@@ -3,6 +3,8 @@
   <component name="NewModuleRootManager" inherit-compiler-output="true">
     <exclude-output />
     <content url="file://$MODULE_DIR$">
+      <excludeFolder url="file://$MODULE_DIR$/APIs/MyGitHubAPI/mygithubapi/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/APIs/MyGitHubAPI/mygithubapi/build" />
       <excludeFolder url="file://$MODULE_DIR$/BGchanger/bg_changer/.pub" />
       <excludeFolder url="file://$MODULE_DIR$/BGchanger/bg_changer/build" />
       <excludeFolder url="file://$MODULE_DIR$/Dice/dice_roller/.pub" />
@@ -23,6 +25,8 @@
       <excludeFolder url="file://$MODULE_DIR$/mydrawerapp/mydrawerapp/build" />
       <excludeFolder url="file://$MODULE_DIR$/signup/.pub" />
       <excludeFolder url="file://$MODULE_DIR$/signup/build" />
+      <excludeFolder url="file://$MODULE_DIR$/spanish/spanish/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/spanish/spanish/build" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
