@@ -53,4 +53,24 @@ class DatabaseHelper{
      var result = await db.query(noteTable, orderBy: '$colPriority ASC');
      return result;
    }
+
+   Future<int> insertNote(Note note) async {
+     Database db = await this.database;
+     var result = await db.insert(noteTable, note.toMap());
+     return result;
+   }
+
+   Future<int> updateNote(Note note) async {
+     Database db = await this.database;
+     var result = await db.update(noteTable, note.toMap(), where: '$colId = ?', whereArgs: [note.id] );
+     return result;
+   }
+
+   Future<int> deleteNote(int id) async {
+     Database db = await this.database;
+     var result = await db.rawDelete('DELETE FROM $noteTable WHERE $colId = $id');
+
+     return result;
+   }
+
 }
