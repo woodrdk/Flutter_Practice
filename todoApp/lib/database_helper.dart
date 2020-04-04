@@ -29,6 +29,7 @@ class DatabaseHelper{
     if(_database == null){
       _database = await initializeDatabase();
     }
+    return _database;
   }
 
   Future <Database> initializeDatabase()async{
@@ -48,7 +49,7 @@ class DatabaseHelper{
        
    }
 
-   Future <List<Map<String, dynamic>>> getNoteMapList() async{
+   Future <List<Map<String, dynamic>>> getNoteMapList() async {
      Database db = await this.database;
      var result = await db.query(noteTable, orderBy: '$colPriority ASC');
      return result;

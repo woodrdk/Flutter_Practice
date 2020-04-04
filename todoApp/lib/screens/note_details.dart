@@ -53,7 +53,8 @@ class NoteDetail extends StatefulWidget{
                   moveToLastScreen();
                 },
               ),
-            ) ,
+            ),
+
             body: Padding(
             padding: EdgeInsets.all(10.0),
             child: Card(
@@ -148,7 +149,7 @@ class NoteDetail extends StatefulWidget{
                         ),
                         Expanded(
                           child: RaisedButton(
-                            textColor: Colors.white,
+                            textColor: Colors.green,
                             color: Colors.red,
                             padding: const EdgeInsets.all(8.0),
                             child: Text(
@@ -169,7 +170,7 @@ class NoteDetail extends StatefulWidget{
               ),
             ),
           ),
-          )
+          ),
         );
     }
 
@@ -257,6 +258,4 @@ class NoteDetail extends StatefulWidget{
       }
       return priority;
     }
-
-
   }
