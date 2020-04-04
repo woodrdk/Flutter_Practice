@@ -14,7 +14,7 @@ class NoteList extends StatefulWidget {
 }
 
 class _NoteListState extends State<NoteList> {
-  DatabaseHelper databaseHelper = DatabaseHelper()
+  DatabaseHelper databaseHelper = DatabaseHelper();
   List<Note> noteList;
   int count = 0;
 
@@ -50,7 +50,11 @@ class _NoteListState extends State<NoteList> {
     }));
 
     if(result == true){
-      //TODO update the view
+      updateListView()
     }
+  }
+
+  void updateListView(){
+
   }
 }
