@@ -73,4 +73,23 @@ class DatabaseHelper{
      return result;
    }
 
+   Future <int> getCount() async {
+     Database db = await this.database;
+     List<Map<String, dynamic>> x = await db.rawQuery(
+       'SELECT COUNT (*) FROM $noteTable'
+     );
+     int result  = Sqflite.firstIntValue(x);
+     return result;
+   }
+
+   Future <List<Note>> getNoteList() async {
+     var noteMapList = await getNoteMapList();
+     int count = noteMapList.length;
+     List<Note> noteList = List<Note>();
+     for(var i = 0; i < count; i++){
+       noteList.add(Note.fromMapObject(noteMapList[i]));
+     }
+     return noteList;
+   }
+
 }
