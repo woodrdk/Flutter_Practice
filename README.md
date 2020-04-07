@@ -1,11 +1,17 @@
 # Flutter_Practice
 Flutter Training
 
-- Background Changer & Randomization
+# Games
 - Dice Roller App
 - Tic Tac Toe
 - Scratch and win
-- Spanish audio app
+
+# Practice
 - Camera/ image picker and gesture practice
 - Navigation practice
 - Drawer practice for android
+- Background Changer & Randomization
+
+# Practical apps
+- Spanish audio app
+- Functional Todo App
